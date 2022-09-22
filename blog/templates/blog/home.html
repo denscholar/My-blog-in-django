@@ -1,0 +1,33 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+{% block content %}
+<div class="container">
+    <div class="row">
+      <div class="col-sm-4 col-md-2 text-center my-5">
+        <div class="image">
+            <img src= {% static 'blog/images/profile-1.jpg' %} alt="profile-image">
+        </div>
+        <p>{{ user.get_full_name }}</p>
+        <p>I am a Full-stack developer proficient in JavaScript, React, Python, Django and Ruby on Rails. I write code and teach for a living</p>
+      </div>
+      <div class="col-sm-4 offset-sm-2 col-md-7 offset-md-0">
+        {% for post in posts %}
+        <div class="card my-3">
+            <div class="card-header">
+              Written by: {{ post.author }} | {{post.dateCreated|timesince}} ago 
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">{{ post.title }}</h5>
+              <p class="card-text">{{ post.body }}</p>
+              <a href="#" class="btn btn-primary">Read more</a>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+      <div class="col-sm-4 offset-sm-2 col-md-3 offset-md-0">
+        <p>This is the preview page</p>
+      </div>
+    </div>
+  </div>
+
+{% endblock content %}
