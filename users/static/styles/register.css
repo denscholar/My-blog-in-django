@@ -1,0 +1,13 @@
+.form-text{
+    display: none !important;
+}
+
+.requiredField{
+    margin: 0.5rem 0 !important;
+}
+
+.shadow {
+    padding: 2rem !important;
+    max-width: 25rem !important;
+    min-width: 25rem !important;
+}
