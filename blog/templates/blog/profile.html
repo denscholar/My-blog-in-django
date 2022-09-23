@@ -1,0 +1,14 @@
+{% load static %}
+<div class="profile-page">
+    <div class="image mt-3">
+        <img src= {% static 'blog/images/profile-1.jpg' %} alt="profile-image">
+    </div>
+    <p class="full-name">{{ user.get_full_name }}</p>
+    <p class='bio p-1'>I am a Full-stack developer proficient in JavaScript, React, Python, Django and Ruby on Rails. I write code and teach code for a living.</p>
+    <div class="social-icons d-flex justify-content-center gap-4 my-3">
+        <a href=""><i class="fa-brands fa-twitter fa-lg"></i></a>
+        <a href=""><i class="fa-brands fa-linkedin fa-lg"></i></a>
+        <a href=""><i class="fa-brands fa-github fa-lg"></i></a>
+    </div>
+
+</div>
