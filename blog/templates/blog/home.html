@@ -9,13 +9,16 @@
       <div class="col-sm-4 offset-sm-2 col-md-7 offset-md-0 center">
         {% for post in posts %}
         <div class="card my-3">
-            <div class="card-header">
-              Written by: {{ post.author }} | {{post.dateCreated|timesince}} ago 
+            <div class="card-header d-flex justify-content-between align-content-center">
+              <div class="thumbnail d-flex justify-content-start align-items-center">
+                <img class="" src= "{{post.author.profile.image.url}}" alt="user-image">
+                <p>Posted by: {{ post.author.profile.user }} </p>
+              </div>
+              <p class="">Posted: {{post.dateCreated|timesince}} ago</p>
             </div>
             <div class="card-body">
-              <h5 class="card-title">{{ post.title }}</h5>
+              <a class="text-decoration-none text-black" href= {% url 'post-detail' post.id %}><h5 class="card-title">{{ post.title | upper }}</h5></a>
               <p class="card-text">{{ post.body }}</p>
-              <a href="#" class="btn btn-primary">Read more</a>
             </div>
           </div>
         {% endfor %}

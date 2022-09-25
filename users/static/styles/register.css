@@ -11,3 +11,7 @@
     max-width: 25rem !important;
     min-width: 25rem !important;
 }
+
+a.text-white.text-text-decoration-none{
+    text-decoration: none !important;
+}
