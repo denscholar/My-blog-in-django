@@ -1,0 +1,12 @@
+.background{
+    background-color: #f1f1f1;
+}
+
+.inner-container{
+    background: white;
+    padding: 1rem;
+}
+
+.inner-container h3{
+    font-size: 1.8rem;
+}
