@@ -1,9 +1,5 @@
-
-.row .left{
-    border: 1px solid black;
-    background: red;
-}
-
-.row .left{
-    border: 1px solid black !important;
+.thumbnail img{
+    border-radius: 50%;
+    width: 3rem;
+    height: 3rem;
 }

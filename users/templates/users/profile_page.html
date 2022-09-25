@@ -1,0 +1,50 @@
+
+{% extends 'blog/base.html' %} {% load crispy_forms_tags %} {% block content %}
+
+<div class="container mt-5">
+  <div class="row d-flex justify-content-center">
+    <div class="col-md-7">
+      <div class="card p-3 py-4">
+        <div class="text-center">
+          <img
+            src="{{ user.profile.image.url }}"
+            {% comment %} width="100" {% endcomment %}
+            class="rounded-circle"
+
+          />
+        </div>
+
+        <div class="text-center mt-3">
+          <h5 class="mt-2 mb-0">{{ user.get_full_name }}</h5>
+          <span>{{ user.profile.bio }}</span>
+
+          <div class="px-4 mt-1">
+            <p class="fonts"></p>
+          </div>
+
+          <ul class="social-list d-flex justify-content-center gap-3">
+            <a href=""><i class="fa-brands fa-twitter fa-lg"></i></a>
+            <a href=""><i class="fa-brands fa-linkedin fa-lg"></i></a>
+            <a href=""><i class="fa-brands fa-github fa-lg"></i></a>
+          </ul>
+          <div class="update-user">
+            <span class="">
+                <a class="text-decoration-none btn btn-outline-primary " href= {% url 'profile_update' %}>Update Profile</a>
+                <a class="text-decoration-none btn btn-outline-primary" href= {% url 'home' %}>Go back home</a>
+            </span>
+          </div>
+
+          {% comment %}
+          <div class="buttons">
+            <button class="btn btn-outline-primary px-4">Message</button>
+            <button class="btn btn-primary px-4 ms-3">Contact</button>
+          </div>
+          {% endcomment %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock content %}
+{% comment %} profile_update {% endcomment %}
