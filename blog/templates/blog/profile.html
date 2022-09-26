@@ -1,4 +1,6 @@
 {% load static %}
+{% if user.is_authenticated  %}
+
 <div class="profile-page">
     <div class="image mt-3">
         <img src= "{{user.profile.image.url}}" alt="profile-image">
@@ -10,5 +12,13 @@
         <a href=""><i class="fa-brands fa-linkedin fa-lg"></i></a>
         <a href=""><i class="fa-brands fa-github fa-lg"></i></a>
     </div>
-
 </div>
+{% else %}
+<div class="profile-page">
+    <div class="image mt-3">
+        <img src="{% static 'blog/images/default.png' %}" alt="default-image">
+    </div>
+    <a class="btn btn-secondary my-3" href= {% url 'login' %}>Sign in here</a>    
+</div>
+{% endif %}
+

@@ -1,3 +1,33 @@
-body{
-    /* background-color: red; */
+
+.fa-github{
+    color: black;
+}
+
+.profile-page{
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    padding: 0.4rem;
+    width: 100%;
+    background: white;
+}
+
+.profile-page .image img {
+    border-radius: 50%;
+    height: 7rem;
+    width: 7rem;
+    object-fit: cover;
+}
+
+.full-name{
+    font-size: 1rem;
+    margin: 5px 0;
+    font-weight: bold;
+    
+}
+.bio{
+    font-size: 14px;
+}
+
+.image img{
+    width: 5rem;
+    height: 5rem;
 }
