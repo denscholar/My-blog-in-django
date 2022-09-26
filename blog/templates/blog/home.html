@@ -19,10 +19,11 @@
             </div>
             <div class="card-body">
               <a class="text-decoration-none text-black" href= {% url 'post-detail' post.id %}><h5 class="card-title">{{ post.title | upper }}</h5></a>
-              <p class="card-text">{{ post.body }}</p>
+              <p class="card-text">{{ post.body|truncatewords:50 }}</p>
             </div>
           </div>
         {% endfor %}
+        
       </div>
       <div class="col-sm-4 offset-sm-2 col-md-3 offset-md-0 right">
         {% include "blog/recent_articles.html" %}
