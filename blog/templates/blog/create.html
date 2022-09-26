@@ -1,13 +1,14 @@
 {% extends 'blog/base.html' %} {% load crispy_forms_tags %} {% block content %}
 <div class="container">
   <div class="d-flex justify-content-center align-items-center">
-    <div class="shadow" >
+    <div class="shadow p-5" >
         <form
         action=""
         method="POST"
       >
         {% csrf_token %}
           <legend>Create a Blog</legend>
+          {{ form.media }}
           {{ form|crispy }}
         <div class="form-group">
           <button type="submit" class="btn btn-success w-100 mt-3">Post</button>

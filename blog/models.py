@@ -2,12 +2,13 @@ from django.db import models
 from django.utils import timezone
 from django.contrib.auth.models import User
 from django.urls import reverse
+from ckeditor.fields import RichTextField
 
 
 class Post(models.Model):
-    author = models.ForeignKey(User, on_delete=models.CASCADE)
+    author = models.ForeignKey(User, on_delete=models.CASCADE)  
     title = models.CharField(max_length = 150)    
-    body = models.TextField()
+    body = RichTextField(blank=True, null=True)
     dateCreated = models.DateTimeField(default=timezone.now)
 
     def __str__(self):
