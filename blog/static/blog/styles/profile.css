@@ -10,7 +10,7 @@
 }
 
 .profile-page .image img {
-    border-radius: 50%;
+    /* border-radius: 50%; */
     height: 7rem;
     width: 7rem;
     object-fit: cover;
