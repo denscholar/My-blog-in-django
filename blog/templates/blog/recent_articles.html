@@ -1,0 +1,30 @@
+{% load static %}
+<div class="wrapper p-2">
+  <h1 class="wrapper mt-3 mb-3">Recent Article</h1>
+  <div
+    class="recent-wrapper mt-3 d-flex justify-content-between align-items-center gap-2"
+  >
+    <div class="recent-list">
+      <img
+        src="{% static 'blog/images/profile-1.jpg' %}"
+        alt="recent article"
+      />
+    </div>
+    <div class="recent-list">
+      <p class="text-title">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus,
+        officiis?
+      </p>
+      <div
+        class="date-posted my-2"
+      >
+        <p class="text-black text-opacity-75">
+            <i class="fa-sharp fa-solid fa-calendar"></i> 12th March, 2022
+        </p>
+        <p class="text-black text-opacity-75"><i class="fa-solid fa-user"></i> @denscholar</p>
+        <p class="text-black text-opacity-75"><i class="fa-sharp fa-solid fa-message"></i> 12</p>
+      </div>
+    </div>
+  </div>
+  <hr>
+</div>

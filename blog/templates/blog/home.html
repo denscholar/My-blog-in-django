@@ -1,14 +1,15 @@
 {% extends 'blog/base.html' %}
 {% load static %}
 {% block content %}
-<div class="mx-5">
+<div class="m-lg-3">
     <div class="row">
       <div class="col-sm-4 col-md-2 text-center my-5 left">
        {% include "blog/profile.html" %}
       </div>
       <div class="col-sm-4 offset-sm-2 col-md-7 offset-md-0 center">
+        <a class="text-decoration-none btn btn-secondary float-end" href= {% url 'create' %}><i class="fa-solid fa-plus"></i> Add a Post</a>
         {% for post in posts %}
-        <div class="card my-3">
+        <div class="card my-5">
             <div class="card-header d-flex justify-content-between align-content-center">
               <div class="thumbnail d-flex justify-content-start align-items-center">
                 <img class="" src= "{{post.author.profile.image.url}}" alt="user-image">
@@ -24,7 +25,7 @@
         {% endfor %}
       </div>
       <div class="col-sm-4 offset-sm-2 col-md-3 offset-md-0 right">
-        <p>This is the preview page</p>
+        {% include "blog/recent_articles.html" %}
       </div>
     </div>
   </div>
