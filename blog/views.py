@@ -8,6 +8,7 @@ from django.contrib.messages.views import SuccessMessageMixin
 # Read Posts/Display all post
 class BlogListView(ListView):
     model = Post
+    paginate_by = 3
     context_object_name = 'posts'
     template_name='blog/home.html'
     ordering = ['-dateCreated']
