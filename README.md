@@ -42,4 +42,10 @@ python manage.py runserver
   <img src="https://user-images.githubusercontent.com/48631109/192172482-195a9991-a4eb-4084-af7d-69a3f23e05c3.PNG" width="500" height="350">
 </p>
 
+## Technology
+- HTML
+- CSS
+- Bootsrap
+- Crispy forms
+- Python
 
